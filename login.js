@@ -34,10 +34,11 @@ loginButton.addEventListener('click', function(e) {
         passwordField.value = '';
         usernameField.value = '';
     } else {
+        // Set loggedInUser in localStorage
+        localStorage.setItem('loggedInUser', JSON.stringify(user));
         loginButton.innerText = 'Redirecting...';
         setTimeout(() => {
-            loginButton.disabled = true;
             window.location.href = 'homepage.html';
-        }, 2000);
+        }, 1000);
     }
 });
