@@ -153,17 +153,32 @@ h1 {
 }
 
 #logoutbtn {
-    font-size: 16px;
-    background: linear-gradient(145deg, #ff4444, #cc0000);
-    padding: 8px 15px;
+    font-size: 14px;
+    background: #f44336;
+    padding: 8px 16px;
     border-radius: 8px;
     width: auto;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
 }
 
 #logoutbtn:hover {
-    background: linear-gradient(145deg, #ff6666, #ff0000);
+    background: #d32f2f;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logoutbtn::before {
+    content: '\f2f5';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
 }
 
 .container {
