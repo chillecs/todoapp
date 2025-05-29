@@ -21,6 +21,10 @@ body {
     max-width: none;
     margin: 0 0 15px 0;
     border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
 }
 
 h1 {
@@ -31,6 +35,8 @@ h1 {
     font-weight: 600;
     text-align: center;
     padding: 10px 0;
+    flex: 1;
+    padding-right: 60px; /* Space for logout button */
 }
 
 #loginForm {
@@ -122,6 +128,21 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    .container-header {
+        min-height: 70px;
+        padding: 5px 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+        padding-right: 50px;
+    }
+
+    #logoutbtn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
     #loginForm {
         width: 85%;
         padding: 20px;
@@ -150,6 +171,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     padding: 0;
+    z-index: 1;
 }
 
 #logoutbtn {
