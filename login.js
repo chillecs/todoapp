@@ -3,6 +3,13 @@ const loginUsers = [
     { username: 'user', password: 'user123' }
 ];
 
+// if already logged in, redirect to homepage
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('loggedInUser')) {
+        window.location.href = 'homepage.html';
+    }
+});
+
 const loginDetails = localStorage.setItem('loginUsers', JSON.stringify(loginUsers));
 
 const loginForm = document.getElementById('loginForm');
@@ -34,8 +41,3 @@ loginButton.addEventListener('click', function(e) {
         }, 2000);
     }
 });
-
-// Redirect to homepage if already logged in
-if (localStorage.getItem('loggedInUser')) {
-    window.location.href = 'homepage.html';
-}
