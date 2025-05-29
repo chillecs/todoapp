@@ -1,0 +1,379 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a1a;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container-header {
+    background: #262626;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 15px 0;
+    border-radius: 0;
+}
+
+h1 {
+    color: #fff;
+    font-size: 40px;
+    text-shadow: none;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#loginForm {
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 100px auto;
+    padding: 30px;
+    background: #262626;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#loginForm h1 {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#loginForm input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #404040;
+    border-radius: 10px;
+    background: #1a1a1a;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#loginForm input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#loginForm button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm p {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    background: #ff3333;
+    border-radius: 8px;
+    border: none;
+    display: block;
+    min-height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm p:empty {
+    display: none;
+}
+
+#loginForm input::placeholder {
+    color: #888;
+}
+
+@media (max-width: 480px) {
+    #loginForm {
+        width: 85%;
+        padding: 20px;
+        margin: 60px auto;
+    }
+
+    #loginForm h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #loginForm input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    #loginForm button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+#logoutbtndiv {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+}
+
+#logoutbtn {
+    font-size: 16px;
+    background: linear-gradient(145deg, #ff4444, #cc0000);
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: auto;
+}
+
+#logoutbtn:hover {
+    background: linear-gradient(145deg, #ff6666, #ff0000);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.info-text {
+    color: #888;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-style: italic;
+}
+
+#taskInput {
+    width: 90%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border: 2px solid #404040;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    background: #262626;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#taskInput:focus {
+    width: 85%;
+    border-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+#taskInput::placeholder {
+    color: #888;
+}
+
+.buttons {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    max-width: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#addTaskBtn, #clearAllBtn {
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+}
+
+#clearAllBtn {
+    background: #f44336;
+}
+
+#addTaskBtn:hover, #clearAllBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 15px 20px;
+    margin: 10px 0;
+    background: #262626;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    border: 1px solid #333;
+    cursor: grab;
+    position: relative;
+}
+
+ul li:active {
+    cursor: grabbing;
+}
+
+ul li.dragging {
+    opacity: 1;
+    background: #262626;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    z-index: 1000;
+}
+
+ul li:not(.dragging) {
+    transition: transform 0.2s ease, margin 0.2s ease;
+}
+
+ul li.drag-over {
+    margin-top: 20px;
+}
+
+ul li.drag-over-above {
+    margin-bottom: 20px;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #2d2d2d;
+}
+
+.delBtn {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    background: #f44336;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: none;
+    color: white;
+}
+
+.delBtn:hover {
+    transform: scale(1.1);
+    background: #d32f2f;
+}
+
+.para {
+    color: #ff6b6b;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.checkbox {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4CAF50;
+    margin: 0;
+}
+
+.taskListContainer {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #262626;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    #taskInput {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    #addTaskBtn, #clearAllBtn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    ul li {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .info-text {
+        font-size: 12px;
+        padding: 0 20px;
+    }
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
